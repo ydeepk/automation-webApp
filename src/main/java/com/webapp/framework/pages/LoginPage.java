@@ -58,7 +58,7 @@ public class LoginPage extends BasePage {
      * @param password the password
      */
     public void login(String username, String password) {
-        log.info("Logging in as {}", username);
+        LOG.info("Logging in as {}", username);
         enterUsername(username);
         enterPassword(password);
         clickLogin();

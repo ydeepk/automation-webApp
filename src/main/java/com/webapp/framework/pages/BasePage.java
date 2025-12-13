@@ -19,10 +19,10 @@ import org.openqa.selenium.WebElement;
 public class BasePage {
 
     /** WebDriver instance used for browser interactions. */
-    protected final WebDriver driver;
+    protected final WebDriver DRIVER;
 
     /** Logger instance scoped to the concrete page class. */
-    protected final Logger log;
+    protected final Logger LOG;
 
     /**
      * Constructs a BasePage instance.
@@ -33,11 +33,11 @@ public class BasePage {
      * @throws IllegalStateException if WebDriver is not initialized
      */
     public BasePage() {
-        this.driver = DriverManager.getDriver();
-        if (this.driver == null) {
+        this.DRIVER = DriverManager.getDriver();
+        if (this.DRIVER == null) {
             throw new IllegalStateException("WebDriver is not initialized");
         }
-        this.log = LogManager.getLogger(getClass());
+        this.LOG = LogManager.getLogger(getClass());
     }
 
     /**
@@ -66,7 +66,7 @@ public class BasePage {
      * @param locator the element locator
      */
     protected void click(By locator) {
-        log.info("Clicking element: {}", locator);
+        LOG.info("Clicking element: {}", locator);
         waitForClickable(locator).click();
     }
 
@@ -79,7 +79,7 @@ public class BasePage {
      * @param inputText the text to enter
      */
     protected void type(By locator, String inputText) {
-        log.info("Typing into element: {} with text: {}", locator, inputText);
+        LOG.info("Typing into element: {} with text: {}", locator, inputText);
         WebElement element = waitForVisible(locator);
         element.clear();
         element.sendKeys(inputText);
@@ -105,7 +105,7 @@ public class BasePage {
         try {
             return waitForVisible(locator).isDisplayed();
         } catch (NoSuchElementException | TimeoutException e) {
-            log.debug("Element not displayed: {}", locator, e);
+            LOG.debug("Element not displayed: {}", locator, e);
             return false;
         }
     }
@@ -116,7 +116,7 @@ public class BasePage {
      * @param url the destination URL
      */
     public void goToUrl(String url) {
-        log.info("Navigating to URL: {}", url);
-        driver.get(url);
+        LOG.info("Navigating to URL: {}", url);
+        DRIVER.get(url);
     }
 }
