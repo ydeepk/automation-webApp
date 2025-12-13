@@ -50,7 +50,7 @@ public final class WaitUtils {
      * @param locator the element locator
      * @return the clickable WebElement
      */
-    public static WebElement waitForClick(By locator) {
+    public static WebElement waitForClickable(By locator) {
         return getWait().until(ExpectedConditions.elementToBeClickable(locator));
     }
 }

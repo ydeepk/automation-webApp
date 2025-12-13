@@ -27,7 +27,7 @@ public class BaseTest {
     public void beforeSuite() {
         LOG.info("== STARTING AUTOMATION SUITE ==");
         LOG.info("Environment= " + System.getProperty("env", "config"));
-        LOG.info("baseURL= " + ConfigLoader.get("baseURL"));
+        LOG.info("baseURL= " + ConfigLoader.get("baseUrl"));
         LOG.info("browser= " + ConfigLoader.get("browser"));
     }
 
@@ -41,7 +41,7 @@ public class BaseTest {
         LOG.info("Initializing WebDriver...");
         WebDriver driver = DriverFactory.createInstance();
         DriverManager.setDriver(driver);
-        DriverManager.getDriver().get(ConfigLoader.get("baseURL"));
+        DriverManager.getDriver().get(ConfigLoader.get("baseUrl"));
     }
 
     /**

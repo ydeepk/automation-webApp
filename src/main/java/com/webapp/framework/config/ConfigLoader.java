@@ -49,7 +49,7 @@ public final class ConfigLoader {
 
         String env = System.getProperty(
                 "env",
-                properties.getProperty("env", "DEV")
+                properties.getProperty("env", "qa")
         ).toUpperCase();
 
         environment = Environment.valueOf(env);

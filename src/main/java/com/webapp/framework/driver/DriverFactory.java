@@ -48,13 +48,19 @@ public final class DriverFactory {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
 
+                chromeOptions.addArguments("--window-size=1920,1080");
+                // Start Chrome maximized.
+                chromeOptions.addArguments("--start-maximized");
+
                 // Apply headless mode if configured.
                 if (headless) {
                     chromeOptions.addArguments("--headless=new");
+                    chromeOptions.addArguments("--disable-gpu");
                 }
 
-                // Start Chrome maximized.
-                chromeOptions.addArguments("--start-maximized");
+                chromeOptions.addArguments("--no-sandbox");
+                chromeOptions.addArguments("--disable-dev-shm-usage");
+
                 return new ChromeDriver(chromeOptions);
 
             case "firefox":
