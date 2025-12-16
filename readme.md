@@ -1,6 +1,4 @@
----
-
-# ✅ **1. `.gitignore` **
+# ✅ 1. `.gitignore`
 
 This file is tuned specifically for:
 
@@ -13,7 +11,7 @@ This file is tuned specifically for:
 * Screenshots
 * Azure Pipelines compatibility
 
-```
+```gitignore
 ### IntelliJ IDEA ###
 .idea/
 *.iml
@@ -64,13 +62,13 @@ This ensures Git contains **only source code**, not noise like build artifacts, 
 
 ---
 
-# ✅ **2. `README.md` **
+# ✅ 2. `README.md`
 
 Copy–paste directly into `README.md`.
 
 ---
 
-# **Automation Framework – Selenium | Java | TestNG | Maven**
+# Automation Framework – Selenium | Java | TestNG | Maven
 
 This repository contains a **scalable, production-ready UI automation framework** designed for real-world enterprise automation.
 
@@ -85,11 +83,11 @@ This project is being developed step-by-step as part of an automation learning a
 
 ---
 
-# ## **1. Tech Stack**
+## 1. Tech Stack
 
 | Layer                   | Technology                              |
 | ----------------------- | --------------------------------------- |
-| Language                | Java (11/17)                            |
+| Language                | Java (11 / 17)                          |
 | UI Automation           | Selenium WebDriver 4.x                  |
 | Test Runner             | TestNG                                  |
 | Build & Dependency Mgmt | Maven                                   |
@@ -101,9 +99,9 @@ This project is being developed step-by-step as part of an automation learning a
 
 ---
 
-# ## **2. Framework Architecture**
+## 2. Framework Architecture
 
-```
+```text
 automation-framework/
 ├── src/
 │   ├── main/
@@ -140,9 +138,9 @@ automation-framework/
 
 ---
 
-# ## **3. Key Features**
+## 3. Key Features
 
-### **Core Capabilities**
+### Core Capabilities
 
 * Page Object Model (POM) with clear separation of actions & assertions
 * Driver factory supporting Local + Remote + Headless executions
@@ -156,153 +154,143 @@ automation-framework/
 
 ---
 
-# ## **4. Execution Options**
+## 4. Execution Options
 
-### **Local Execution**
+### Local Execution
 
-```
+```bash
 mvn clean test
 ```
 
-### **Environment-Specific Execution**
+### Environment-Specific Execution
 
-```
+```bash
 mvn clean test -Denv=qa
 ```
 
-### **Parallel Execution**
+### Parallel Execution
 
-Configured via `testng.xml` → `parallel="tests"` / `thread-count`.
+Configured via `testng.xml` using `parallel="tests"` and `thread-count`.
 
 ---
 
-# ## **5. CI/CD Integration – Azure Pipelines**
+## 5. CI/CD Integration – Azure Pipelines
 
 Pipeline performs:
 
 1. Maven build + test
-2. Publish: reports, logs, screenshots
-3. Optional: email/webhook notifications
-4. Optional: run on BrowserStack/Selenium Grid
+2. Publish reports, logs, screenshots
+3. Optional notifications (email / webhook)
+4. Optional BrowserStack / Selenium Grid execution
 
 Pipeline file:
 `azure-pipelines.yml`
 
 ---
 
-# ## **6. Project Phases (Milestone-based)**
+## 6. Project Phases (Milestone-Based)
 
-### **Phase 1 — Foundation**
+### Phase 1 — Foundation
 
 * Project skeleton
 * Maven setup
 * Selenium + TestNG integration
 * Basic Page Objects
 * First smoke test (Login)
-* Config loader implementation
+* Config loader
 
 **Outcome:** Framework compiles & runs locally.
 
 ---
 
-### **Phase 2 — Framework Strengthening**
+### Phase 2 — Framework Strengthening
 
 * Driver Factory (local + remote)
 * Explicit waits utility
 * Retry mechanism
 * Screenshot utility
 * TestNG listeners
-* Log4j2 logging system
+* Log4j2 logging
 
 **Outcome:** Stable, retriable tests with logs & screenshots.
 
 ---
 
-### **Phase 3 — Reporting & Data Handling**
+### Phase 3 — Reporting & Data Handling
 
 * Extent Reports integration
 * CSV, Excel, JSON data providers
-* Sample data-driven tests
-* Report customization (system info, screenshots, categories)
-
-**Outcome:** Rich reports + data-driven capabilities.
+* Data-driven tests
+* Report customization
 
 ---
 
-### **Phase 4 — Real Test Coverage**
+### Phase 4 — Real Test Coverage
 
-* Smoke suite creation
-* Regression suite creation
+* Smoke & regression suites
 * Large dataset validations
-* Multi-page flows (search → cart → checkout)
-
-**Outcome:** Real functional automation examples.
+* End-to-end flows
 
 ---
 
-### **Phase 5 — CI/CD (Azure)**
+### Phase 5 — CI/CD (Azure)
 
-* Pipeline YAML
-* Test execution on Azure agent
-* Publishing build artifacts
-* Notifications (email/slack/webhook)
-* Parameterized executions (browser, env)
-
-**Outcome:** Full automation pipeline for continuous testing.
+* Azure pipeline YAML
+* Artifact publishing
+* Parameterized execution
 
 ---
 
-### **Phase 6 — Scaling & Remote Execution**
+### Phase 6 — Scaling & Remote Execution
 
-* Selenium Grid (Docker or local)
-* BrowserStack/LambdaTest integration
-* Parallel execution on cloud browsers
-* Cross-browser testing strategy
-
-**Outcome:** Distributed, scalable test execution.
+* Selenium Grid
+* BrowserStack / LambdaTest
+* Cross-browser strategy
 
 ---
 
-### **Phase 7 — Advanced Enhancements (Optional)**
+### Phase 7 — Advanced Enhancements (Optional)
 
-* Dockerizing the framework
-* API + UI hybrid framework
+* Dockerization
+* Hybrid UI + API framework
 * Test data generator
-* Custom HTML dashboards
-* Git Hooks (lint, format, precommit validations)
+* Custom dashboards
+* Git hooks
 
 ---
 
-# ## **7. Goals**
+## 7. Goals
 
-### **Short-term Goals**
+### Short-Term Goals
 
 * Master automation fundamentals
-* Build a stable, production-grade framework
-* Understand how real test architectures are structured
-* Practice coding discipline and clean design
+* Build a production-grade framework
+* Understand real test architectures
 
-### **Long-term Goals**
+### Long-Term Goals
 
-* Be interview-ready for Automation Engineer roles
-* Automate a complete workflow on a real web application
-* Run tests across multiple browsers + environments
-* Integrate into a professional CI/CD pipeline
-* Build the confidence to design frameworks independently
+* Be interview-ready
+* Automate full workflows
+* CI/CD mastery
+* Framework design confidence
 
 ---
 
-# ## **8. Tasks To Do Next (Immediate Steps)**
+## 8. Tasks To Do Next
 
-1. Implement config loader
-2. Implement driver manager
-3. Create base test class
-4. Add Log4j2 and verify logs
-5. Add ExtentReports integration
-6. Create one Page Object + a simple smoke test
-7. Add retry logic
-8. Produce first working automation run
+1. Config loader
+2. Driver manager
+3. Base test class
+4. Log4j2 setup
+5. Extent Reports
+6. First smoke test
+7. Retry logic
+8. First stable run
 
 ---
 
-# ## **9. Contact / Support**
+## 9. Contact / Support
+
+*Add your contact details here.*
+
+---
