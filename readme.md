@@ -1,10 +1,6 @@
-Below is a **production-ready `.gitignore`** for a Java + Maven + Selenium + TestNG + ExtentReports framework built on **IntelliJ IDEA**, followed by a **clear, outcome-oriented README.md** that reflects real-project expectations, goals, phase-wise deliverables, and usage instructions.
-
-No fluff. Everything is actionable.
-
 ---
 
-# ✅ **1. `.gitignore` (copy–paste as is)**
+# ✅ **1. `.gitignore` **
 
 This file is tuned specifically for:
 
@@ -68,7 +64,7 @@ This ensures Git contains **only source code**, not noise like build artifacts, 
 
 ---
 
-# ✅ **2. `README.md` (clean, professional, real-project format)**
+# ✅ **2. `README.md` **
 
 Copy–paste directly into `README.md`.
 
@@ -310,19 +306,3 @@ Pipeline file:
 ---
 
 # ## **9. Contact / Support**
-
-This project is part of a guided, step-by-step automation mastery journey.
-
----
-
-If you want, I can now:
-
-✅ Generate starter folder structure with empty files
-✅ Generate sample Page Object + first test
-✅ Generate full Log4j2 config
-✅ Generate ConfigLoader class
-✅ Generate DriverFactory
-✅ Generate Azure Pipeline YML
-✅ Generate CSV/JSON/Excel test-data templates
-
-**Tell me: should I generate those now?**
